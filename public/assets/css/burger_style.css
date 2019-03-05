@@ -1,0 +1,87 @@
+
+.jumbotron {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color: #AF593E;
+    background-size: 15px 15px;
+      background-attachment: fixed;
+      border-radius: 50px 50px;
+    margin: 0;
+    color: #f4f4f4;
+    
+}
+
+
+#mainContent {
+margin: 10px auto;
+} 
+
+
+.logo {
+    border-radius: 10px;
+
+}
+
+.newForm {
+    width: 40%
+}
+
+
+#leftSide,
+#rightSide,
+#bottomSide {
+    
+    color: #f4f4f4;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+#leftSide{
+    background-color: #f8c471;
+}
+
+#rightSide {
+    background-color:#FD3A4A;
+}
+
+#bottomSide{
+    background-color: rgb(3, 116, 3);
+}
+#eatbutton, 
+#trashbutton {
+    float: right
+}
+
+footer {
+  height: 5vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color: #AF593E;
+    background-size: 15px 15px;
+      background-attachment: fixed;
+      border-radius: 50px 50px;
+    margin-top: 10px;
+    color: #f4f4f4;
+    
+}
+
+footer a{
+    color: #f4f4f4;
+
+}

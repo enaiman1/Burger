@@ -1,0 +1,86 @@
+{{!-- header --}}
+<div class="jumbotron">
+    <h1>Burger Connoisseur</h1>
+    <br>
+    <h3>Create One || Eat One </h3>
+
+
+</div>
+
+
+
+<div class="container" id="mainContent">
+
+
+    <div class="row">
+
+        {{!-- list of burger to be  --}}
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="leftSide"><strong>To be Eaten</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burger}}
+                        {{#unless devoured}}
+                        <span><strong>{{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="eatburger btn btn-success" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {{!-- center image --}}
+        <div class="col-sm-4">
+            <img src="/assets/img/burger.jpeg" class="logo" alt="Eric Naiman logo" width="300px" height="300px">
+        </div>
+
+        {{!-- list of have been eaten --}}
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="rightSide"><strong>Burger that been Devoured</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burger}}
+                        {{#if devoured}}
+                        <span><strong>{{this.id}} - {{this.burger_name}}</strong></span>
+                        <button type="button" class="trashburger btn btn-secondary" id="trashbutton"
+                            data-id="{{this.id}}" data-newDevoured="{{devour}}"><span
+                                class="fa fa-trash"></span></button>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container newForm">
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading" id="bottomSide"><strong>Create New Burger</strong></div>
+            <div class="panel-body">
+                <panel>
+                    <form class="create-form">
+                        <div class="form-group">
+                            <label for="newBurger">New Burger:</label>
+                            <input type="text" id="newburger" name="burger">
+                            <button type="submit" class="btn btn-warning" id="addburger"><span
+                                    class="fa fa-thumbs-up"></span></button>
+                        </div>
+                    </form>
+                </panel>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+        <div class="col-md-12">
+            <p>coded by Eric Naiman || Burger Connoisseur </a> || <a href="https://github.com/enaiman1/Burger">Git Hub Repo</a></p>
+        </div>
+    </footer>
